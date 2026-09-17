@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crack Product Management Interviews | Navya Chiliveri</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="10 Situational Product Management Questions and How I Would Approach Them. Demonstrating Product Thinking, prioritization, stakeholder alignment, and outcome-focused execution by Navya Chiliveri.">
+  <meta name="keywords" content="Product Management Interview, Situational PM Questions, Business Analyst to Product Owner, Product Thinking Framework, Prioritization RICE, Navya Chiliveri">
+  <meta name="author" content="Navya Chiliveri">
+  
+  <!-- Google Fonts: Manrope & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    .interview-hero {
+      padding-top: calc(var(--nav-height) + 3.5rem);
+      padding-bottom: 3.5rem;
+      background: radial-gradient(circle at 75% 20%, rgba(204, 251, 241, 0.4) 0%, rgba(248, 250, 252, 1) 70%);
+      text-align: center;
+    }
+
+    .interview-search-bar {
+      max-width: 680px;
+      margin: 2rem auto 1.5rem;
+      position: relative;
+    }
+
+    .interview-search-input {
+      width: 100%;
+      padding: 0.95rem 1.25rem 0.95rem 3rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-base);
+      background: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast);
+    }
+
+    .interview-search-input:focus {
+      border-color: var(--color-primary-teal);
+      box-shadow: var(--shadow-md), 0 0 0 3px rgba(15, 118, 110, 0.15);
+      outline: none;
+    }
+
+    .search-icon-pos {
+      position: absolute;
+      left: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text-muted);
+      pointer-events: none;
+    }
+
+    .interview-controls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .topic-filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .topic-filter-btn {
+      padding: 0.4rem 0.9rem;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: #FFFFFF;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .topic-filter-btn:hover {
+      border-color: var(--color-primary-teal);
+      color: var(--color-primary-teal);
+    }
+
+    .topic-filter-btn.active {
+      background: var(--color-primary-teal);
+      color: #FFFFFF;
+      border-color: var(--color-primary-teal);
+    }
+
+    .interview-q-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .q-block {
+      background: var(--color-bg-light);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      border-left: 3px solid var(--color-primary-teal);
+    }
+
+    .q-block-title {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--color-primary-teal);
+      margin-bottom: 0.35rem;
+    }
+
+    .q-block-text {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      margin-bottom: 0;
+      line-height: var(--lh-relaxed);
+    }
+
+    .principle-banner {
+      background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+      border: 1px solid var(--color-border-accent);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .principle-banner strong {
+      color: var(--color-primary-navy);
+      font-size: var(--text-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="topNav">
+    <div class="container-wide nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Navya Chiliveri Home">
+        <span class="nav-brand-name">Navya Chiliveri</span>
+        <span class="nav-brand-title">Senior Business Analyst</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">← Back to Portfolio</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#healthcare" class="nav-link">Healthcare</a>
+        <a href="index.html#product" class="nav-link">Product Thinking</a>
+        <a href="#interview-questions" class="nav-link active">PM Interview Guide</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Let's Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="interview-hero">
+    <div class="container-narrow">
+      <h1 class="hero-title" style="font-size: clamp(2.25rem, 4vw + 1rem, 3.25rem); margin-bottom: 1rem;">
+        Crack Product Management Interviews
+      </h1>
+      <p class="hero-subtitle" style="margin-bottom: 0.5rem; font-weight: 600; color: var(--color-primary-navy);">
+        10 Situational Product Management Questions — and How I Would Approach Them
+      </p>
+      <p style="font-size: var(--text-sm); color: var(--color-text-muted); max-width: 620px; margin: 0 auto;">
+        "Product interviews are rarely about memorizing frameworks. They are about demonstrating how you think."
+      </p>
+    </div>
+  </section>
+
+  <!-- Accordion Section -->
+  <section class="section" id="interview-questions" style="padding-top: 1rem;">
+    <div class="container-narrow">
+      
+      <!-- Filter controls -->
+      <div class="interview-controls-row">
+        <div class="topic-filter-group">
+          <button class="topic-filter-btn active" data-topic="all">All (10)</button>
+          <button class="topic-filter-btn" data-topic="prioritization">Prioritization</button>
+          <button class="topic-filter-btn" data-topic="ambiguity">Ambiguity</button>
+          <button class="topic-filter-btn" data-topic="alignment">Stakeholders</button>
+          <button class="topic-filter-btn" data-topic="tradeoffs">Engineering Trade-offs</button>
+          <button class="topic-filter-btn" data-topic="metrics">Adoption & Metrics</button>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-secondary btn-sm" id="expandAllQuestions">Expand All</button>
+          <button class="btn btn-secondary btn-sm" id="collapseAllQuestions">Collapse All</button>
+        </div>
+      </div>
+
+      <!-- 10 Questions Accordion List -->
+      <div class="accordion-group" id="interviewAccordions">
+        
+        <!-- Question 01 -->
+        <div class="accordion-item interview-question-item expanded" data-tags="prioritization,strategy">
+          <button class="accordion-header interview-accordion-header" aria-expanded="true">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">01</span>
+              <span class="accordion-title">You have 10 feature requests, but your team can only build 3. How would you prioritize them?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">Multiple cross-functional stakeholders submitted 10 competing feature requests for the upcoming quarterly cycle, but engineering bandwidth only permits delivering 3 items.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I would evaluate each candidate across structured dimensions: <strong>Customer Impact</strong>, <strong>Business Value</strong>, <strong>Strategic Alignment</strong>, <strong>Urgency</strong>, <strong>Effort/Complexity</strong>, <strong>Dependencies</strong>, and <strong>Risk</strong>. I apply quantitative frameworks such as <strong>RICE</strong> (Reach, Impact, Confidence, Effort) or a <strong>Value vs. Effort Matrix</strong> to rank options objectively rather than relying on gut feel or stakeholder hierarchy.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">In a healthcare application, improving patient registration workflows and automated appointment reminders may create direct reduction in no-show rates and save clinic operational hours, producing significantly higher strategic return than a cosmetic UI feature like dark mode.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Prioritize outcomes and customer impact, not stakeholder volume.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 02 -->
+        <div class="accordion-item interview-question-item" data-tags="ambiguity,requirements">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">02</span>
+              <span class="accordion-title">A stakeholder gives you a vague requirement. What do you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">A senior business leader requests: <em>"We need a better patient dashboard."</em></p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I resist jumping into solutions or mocking up screens immediately. Instead, I conduct discovery by clarifying fundamental questions:
+                <br>• <strong>Who is the user?</strong> (Is it the patient, a caregiver, or a clinic coordinator?)
+                <br>• <strong>What current problem exists?</strong> (Are patients missing appointments or unable to view test results?)
+                <br>• <strong>What is the user trying to accomplish?</strong>
+                <br>• <strong>What specific information do they need at a glance?</strong>
+                <br>• <strong>What business outcome measures success?</strong> (Support ticket reduction? Faster portal adoption?)</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Requirement Transformation</div>
+                <p class="q-block-text">I transform <em>"Build a better patient dashboard"</em> into a concrete user story and acceptance criteria: <em>"As an active patient, I need a unified home screen displaying my next appointment, unread lab results, and outstanding action items so I can manage my care without calling the clinic."</em></p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Understand the problem before defining the solution.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 03 -->
+        <div class="accordion-item interview-question-item" data-tags="alignment,stakeholders">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">03</span>
+              <span class="accordion-title">Stakeholders disagree about a product decision. What do you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">Business operations wants a comprehensive, multi-field data capture form, whereas UX advocates for a minimal 2-step flow to avoid user drop-off.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I facilitate a structured alignment workshop that separates the discussion into 4 distinct buckets: <strong>Facts</strong>, <strong>Assumptions</strong>, <strong>Opinions</strong>, and <strong>Constraints</strong>. I anchor the conversation around verified user needs, core business objectives, technical feasibility, and objective data rather than seniority.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Resolution</div>
+                <p class="q-block-text">Facilitate a solution around progressive disclosure: capture the essential 3 fields during onboarding to maximize conversion, and prompt for supplementary information progressively throughout the user journey or after the first successful encounter.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Create shared understanding instead of choosing the loudest stakeholder.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 04 -->
+        <div class="accordion-item interview-question-item" data-tags="tradeoffs,delivery">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">04</span>
+              <span class="accordion-title">Engineering says a feature will take 3 months, but business wants it in 3 weeks. What do you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">A hard deadline conflict between executive business expectations and engineering complexity.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I investigate technical dependencies, identify architectural bottlenecks, and evaluate the core 20% of features that deliver 80% of immediate business value. I propose an <strong>Incremental Phased Release Strategy (MVP)</strong> rather than an all-or-nothing delivery.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">Instead of building a full-scale healthcare analytics and reporting suite in 3 weeks:
+                <br>• <strong>Phase 1 (Week 3 MVP):</strong> Pre-aggregated essential PDF/CSV export reports.
+                <br>• <strong>Phase 2 (Month 2):</strong> Interactive date-range filters and clinician-specific dashboard views.
+                <br>• <strong>Phase 3 (Month 3):</strong> Advanced custom query builder and automated email digests.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Reduce scope before compromising quality or team sustainability.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 05 -->
+        <div class="accordion-item interview-question-item" data-tags="metrics,adoption">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">05</span>
+              <span class="accordion-title">A feature launched but users aren't adopting it. What would you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">A major portal feature went live 30 days ago, but user telemetry shows adoption is below 15% of active users.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I diagnose the root cause across the user funnel:
+                <br>1. <strong>Discoverability:</strong> Do users even know the feature exists? (Is it hidden 3 clicks deep in sub-navigation?)
+                <br>2. <strong>Friction / Usability:</strong> Are users starting the workflow but dropping off due to confusing UI or errors?
+                <br>3. <strong>Value Mismatch:</strong> Does the feature actually solve the user's immediate problem in their daily routine?
+                <br>4. <strong>Training / Awareness:</strong> Do internal users or staff need contextual tooltips and onboarding guidance?</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">If healthcare practitioners are not using a digital pre-charting feature, user interviews might reveal that the button is situated on an unrelated tab. Relocating the action directly to the main patient queue screen can boost adoption rapidly without rewriting code.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Treat low adoption as a learning opportunity; diagnose before rebuilding.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 06 -->
+        <div class="accordion-item interview-question-item" data-tags="tradeoffs,crisis">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">06</span>
+              <span class="accordion-title">A critical production issue is reported. What would you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">An urgent incident ticket arrives during active business hours reporting a system malfunction in production.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I rapidly triage using a structured incident matrix: <strong>Impact</strong> → <strong>Severity</strong> → <strong>Number of Users Affected</strong> → <strong>Financial / Regulatory / Patient Risk</strong> → <strong>Reproducibility</strong> → <strong>Temporary Workaround</strong>. I establish clear communication cadence with stakeholders and assist engineering in isolating business logic failures.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">A failure in patient appointment confirmation notifications immediately impacts hundreds of clinic schedules and takes priority over minor layout bugs on an account settings page.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Prioritize calmly based on user impact, safety, and business risk.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 07 -->
+        <div class="accordion-item interview-question-item" data-tags="strategy,prioritization">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">07</span>
+              <span class="accordion-title">How would you decide whether to build a feature?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I run a validation filter across 6 key questions:
+                <br>1. What specific user problem does this solve?
+                <br>2. How frequently does this problem occur, and for how many users?
+                <br>3. Does solving this align with our product vision and business OKRs?
+                <br>4. Can users solve this today with existing features or lightweight operational workarounds?
+                <br>5. What are the total build, maintenance, and opportunity costs?
+                <br>6. How will we definitively measure success?</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">Before allocating 2 sprint cycles to build a custom complex data export engine, research which 3 summary metrics managers actually inspect weekly. Delivering a focused lightweight email digest may satisfy 95% of the need at 10% of the build cost.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Validate the problem before investing in the solution.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 08 -->
+        <div class="accordion-item interview-question-item" data-tags="ambiguity,delivery">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">08</span>
+              <span class="accordion-title">You discover that a requirement has been misunderstood after development has started. What do you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">Mid-sprint, developer inquiries reveal that a core business rule was interpreted differently than intended.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I pause unverified coding immediately to prevent compounded rework. I rapidly determine:
+                <br>• What exact gap exists between business expectation and current technical build?
+                <br>• How much work is already completed and salvageable?
+                <br>• What is the sprint impact?
+                <br>I convene a 15-minute alignment sync with the tech lead and business owner, update the acceptance criteria in the ticket, and document the resolution clearly.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">If a workshop job-card approval workflow was built for a single manager approval but corporate policy mandates secondary sign-off for repairs exceeding $1,000, update the rule specification immediately and calibrate whether the delta fits in the sprint or forms a fast-follow story.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Surface ambiguity early rather than allowing incorrect work to continue.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 09 -->
+        <div class="accordion-item interview-question-item" data-tags="prioritization,backlog">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">09</span>
+              <span class="accordion-title">Your backlog is growing faster than your team can deliver. What would you do?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">The Situation</div>
+                <p class="q-block-text">The backlog contains 150+ tickets and requests keep piling up each week from stakeholders.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I run a rigorous backlog grooming and triage session to categorize items into 4 clear buckets: <strong>Now</strong> (Current/Next Sprint), <strong>Next</strong> (Upcoming Quarter OKR drivers), <strong>Later</strong> (Valid ideas without near-term alignment), and <strong>Won't Do / Archive</strong>. I establish a transparent intake process requiring new requests to state the business problem and expected metric impact.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">In an enterprise backlog with 100+ requests, analyzing tickets often reveals that only 15 directly support the current strategic milestone. Archiving stale tickets restores team focus and eliminates backlog noise.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> A backlog is a prioritized roadmap tool, not a storage room for every idea.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="accordion-item interview-question-item" data-tags="metrics,strategy">
+          <button class="accordion-header interview-accordion-header" aria-expanded="false">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">10</span>
+              <span class="accordion-title">How would you measure whether a product feature was successful?</span>
+            </div>
+            <div class="accordion-icon">▼</div>
+          </button>
+          <div class="accordion-content">
+            <div class="interview-q-body">
+              <div class="q-block">
+                <div class="q-block-title">How I'd Approach It</div>
+                <p class="q-block-text">I define success metrics <strong>before writing requirements</strong>, categorized across quantitative and qualitative indicators:
+                <br>• <strong>Adoption & Reach:</strong> Percentage of target users who use the feature weekly.
+                <br>• <strong>Task Completion Rate:</strong> Did users successfully finish the intended workflow?
+                <br>• <strong>Efficiency / Time-to-Task:</strong> Did the new workflow reduce processing latency?
+                <br>• <strong>Quality & Support:</strong> Did support tickets, error rates, or rework decrease?
+                <br>• <strong>Business Impact:</strong> Cost reduction, revenue expansion, or compliance accuracy.</p>
+              </div>
+
+              <div class="q-block">
+                <div class="q-block-title">Practical Example</div>
+                <p class="q-block-text">For a digital clinical appointment booking feature, success is measured by: 85%+ booking completion rate, reduction in clinic phone inquiries by 40%, and reduction in average scheduling time from 6 minutes to 90 seconds—rather than simply celebrating that the code was deployed on time.</p>
+              </div>
+
+              <div class="principle-banner">
+                <span style="color: var(--color-primary-teal); font-size: 1.1rem;">💡</span>
+                <span><strong>Core Principle:</strong> Measure outcomes, not output.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: 0;">
+        © 2026 Navya Chiliveri • Senior Business Analyst | Healthcare Technology | Product
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/interview.js"></script>
+</body>
+</html>
